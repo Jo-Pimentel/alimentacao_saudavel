@@ -37,3 +37,13 @@ main{
     list-style-type: none;
     padding: 0;
 }
+
+.geraImc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.geraImc input, button{
+    border-radius: 32px;
+}
