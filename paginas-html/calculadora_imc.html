@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alimentação saudável</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../imagens/pngtree-flat-icon-with-cutlery-menu-dish-food-vector-png-image_26225226.png">
     <script src="../js/script.js"></script>
 </head>
-<body>
+<body id="corpo">
     <header>
         <h1>A saúde começa com uma alimentação saudável</h1>
         <p><b>Por que se alimentar bem?</b></p>
@@ -17,18 +17,16 @@
     <main>
         <h1>Calculadora de IMC</h1>
 
-        <section class="geraImc">
-            <h3>Insira sua altura aqui</h3>
-            <input type="text" id="altura">
-            <h3>Insira seu peso aqui</h3>
-            <input type="text" id="peso"><br>
-            <h3>Qual a sua idade(Insira apenas o número)?</h3>
+        <section class="Imc" id="ohImc">
+            <br><label>Insira sua altura aqui</label>
+            <input type="text" id="altura" class="valor"><br>
+            <label>Insira seu peso aqui</label>
+            <input type="text" id="peso" class="valor"><br>
+            <label>Insira sua idade aqui(apenas o número)</label>
             <input type="text" id="idade"><br>
+            <button type="button" onclick="comparaImc()">Conferir IMC</button>
+            <p id="suaSituacao"></p>
         </section>
-        <button type="button" onclick="geraImc()">Gerar IMC</button>
-        <p id="seuImc">Seu IMC: </p>
-        <button type="button" onclick="comparaImc()">Ver situação?</button>
-        <p id="suaSituacao">Sua situação: </p>
     </main>
 </body>
 </html>
