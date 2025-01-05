@@ -3,8 +3,7 @@ function comparaImc(){
     let peso = parseFloat(document.getElementById("peso").value);
     let imc = (peso/(altura**2)).toFixed(1);
     let idade = parseInt(document.getElementById("idade").value);
-    let situacao = document.getElementById("situacaoIlustrada").src;
-
+    
     try{
         if(isNaN(altura) || isNaN(peso)) throw "Um dos valores inseridos não corresponde a um número.";
     }
@@ -12,11 +11,7 @@ function comparaImc(){
         document.getElementById("suaSituacao").innerHTML = (erro);
     }
 
-    if(isNaN(idade)){
-        document.getElementById("suaSituacao").innerHTML = "Um dos valores inseridos não corresponde a um número.";
-    }
-
-    else if(idade<60){
+    if(idade<60){
         if(imc<18.5){
             document.getElementById("suaSituacao").innerHTML = `Seu IMC é ${imc} e seu peso é baixo.`;
         }
@@ -29,8 +24,11 @@ function comparaImc(){
         else if(imc>=35 && imc<40){
             document.getElementById("suaSituacao").innerHTML = `Seu IMC é ${imc} e você está no segundo nível de obesidade.`;
         }
-        else{
+        else if(imc>=40){
             document.getElementById("suaSituacao").innerHTML = `Seu IMC é ${imc} e você tem obesidade mórbida.`;
+        }
+        else{
+            document.getElementById("suaSituacao").innerHTML = "Um dos valores inseridos não corresponde a um número.";
         }
     }
 
@@ -41,8 +39,11 @@ function comparaImc(){
         else if(imc>=22 && imc<27){
             document.getElementById("suaSituacao").innerHTML = `Seu IMC é ${imc} e seu peso é adequado.`;
         }
-        else{
+        else if(imc>=27){
             document.getElementById("suaSituacao").innerHTML = `Seu IMC é ${imc} e você está sobrepeso.`;
+        }
+        else{
+            document.getElementById("suaSituacao").innerHTML = "Um dos valores inseridos não corresponde a um número.";
         }
     }
 }

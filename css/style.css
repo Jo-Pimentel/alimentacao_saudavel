@@ -20,6 +20,24 @@ header h1{
     width: 100%;
 }
 
+.pInicial{
+    text-align: left;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+footer{
+    text-align: right;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+a{
+    color:blue;
+    text-decoration: none;
+}
+
 main{
     padding: 16px;
     max-width: 1200px;
@@ -27,13 +45,13 @@ main{
     text-align: center;
 }
 
-.sumario, .razoes, .doencas, a{
+.sumario, .razoes, .doencas, .sobreOSite{
     background-color: burlywood;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.sumario li, .razoes li{
+.sumario li, .razoes li, .sobreOSite li{
     list-style-type: none;
     padding: 0;
 }
