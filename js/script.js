@@ -36,7 +36,6 @@ function comparaImc(){
 
     try{
         if(isNaN(altura) || isNaN(peso) || isNaN(idade)) throw "Um dos valores inseridos não corresponde a um número.";
-        else if(altura == " " || peso == " " || idade == " ") throw "Um dos campos está vazio, preencha-o.";
     }
     catch(erro){
         document.getElementById("suaSituacao").innerHTML = (erro);
